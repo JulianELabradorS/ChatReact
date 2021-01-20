@@ -3,7 +3,6 @@ import React from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
 
 const ModalGifs = (props) => {
-	const sendGift = (e) => {};
 	return (
 		<Modal
 			size='lg'
@@ -17,11 +16,11 @@ const ModalGifs = (props) => {
 				<Row>
 					{props.gifs.map((gif) => {
 						return (
-							<Col md='3' className='mb-3'>
+							<Col key={gif.id} md='3' className='mb-3'>
 								<img
 									className='w-100 h-100'
 									src={gif.images.preview_gif.url}
-									onClick={(e) => props.gifClick(e.target.src)}></img>
+									onClick={(e) => props.gifClick(e.target.src, props.setShow)}></img>
 							</Col>
 						);
 					})}

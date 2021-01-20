@@ -60,7 +60,8 @@ const ChatRoom = (props) => {
 			socket.emit('sendMessage', { text: message, user: user, type: 'text' }, () => setMessage(''));
 		}
 	};
-	const gifClick = (url) => {
+	const gifClick = (url, setShow) => {
+		setShow(false);
 		socket.emit('sendMessage', { text: url, user: user, type: 'gif' }, () => setMessage(''));
 	};
 
