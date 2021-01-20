@@ -20,7 +20,8 @@ const ModalGifs = (props) => {
 								<img
 									className='w-100 h-100'
 									src={gif.images.preview_gif.url}
-									onClick={(e) => props.gifClick(e.target.src, props.setShow)}></img>
+									onClick={(e) => props.gifClick(e.target.src, props.setShow)}
+									alt='gifs'></img>
 							</Col>
 						);
 					})}

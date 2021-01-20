@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import './styles/message.css';
 
 const Message = ({ message: { text, user, date, type }, id }) => {
-	let isSentByCurrentUser = false;
 	let toDate = new Date(date).toLocaleString();
 	if (id === user.id && type === 'text') {
 		return (
@@ -25,7 +24,7 @@ const Message = ({ message: { text, user, date, type }, id }) => {
 					{toDate}
 				</p>
 				<div className='messageBox backgroundBlue'>
-					<img src={text} />
+					<img src={text} alt='gif sended' />
 				</div>
 			</div>
 		);
@@ -33,7 +32,7 @@ const Message = ({ message: { text, user, date, type }, id }) => {
 		return (
 			<div className='messageContainer justifyStart'>
 				<div className='messageBox backgroundLight'>
-					<img src={text} />
+					<img src={text} alt='gif sended' />
 				</div>
 				<p className='sentText pl-10 '>
 					{user.nickName} {toDate}{' '}
