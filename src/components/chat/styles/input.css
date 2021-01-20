@@ -1,0 +1,4 @@
+.row > .form-control,
+.row > .btn {
+	border-radius: 0;
+}

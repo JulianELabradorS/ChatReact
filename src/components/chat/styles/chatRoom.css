@@ -1,0 +1,16 @@
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.chat {
+	flex: 1;
+	height: 80%;
+}
+.chat-text {
+	height: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
